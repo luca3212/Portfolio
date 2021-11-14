@@ -208,8 +208,8 @@ header .contenedor {
   width: 48%;
   float: right;
   padding: 10px;
-  -webkit-animation: entradaText 4s;
-          animation: entradaText 4s;
+  -webkit-animation: entradaText 1s;
+          animation: entradaText 1s;
 }
 
 .partIzq .text #dentroText h2 {

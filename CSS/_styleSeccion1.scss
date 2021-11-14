@@ -5,9 +5,7 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        
     }
-   
 }
 
 .partIzq{
@@ -28,25 +26,16 @@
         position: absolute;
         width: 100%;
         left: 0;
-        //bottom: 0;
-        //margin-bottom: 150px;
-        //background-color: rgb(22, 22, 22);
         z-index: 0;
         padding: 20px;
-        //padding:25px;
         transform: skewY(-5deg);
-        //border-top: 4px solid var(--verde);
-        //border-right: 4px solid var(--verde);
-        //border-bottom: 4px solid var(--verde);
-        
         
         #dentroText{
-            
             width: 48%;
             float: right;
             padding:10px;
-            animation: entradaText 4s;
-             h2{
+            animation: entradaText 1s;
+            h2{
                  font-style: italic;
                  font-weight: 800;
                  font-size: 2.8rem;
@@ -54,21 +43,15 @@
                  text-transform: uppercase;
                  color: #FFFFFF;
                  letter-spacing: 1px;
-                 
-             }
-             p{
-                 
-                 color: #dbdbdb;
-                 text-transform: uppercase;
-                 text-align: left;
-                 font-style: italic;
-             }
-           
+            }
+            p{
+                color: #dbdbdb;
+                text-transform: uppercase;
+                text-align: left;
+                font-style: italic;
+            }
         }
-        
-    
     }
-    
 }
 
 .partDer{
@@ -76,16 +59,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-   
-    
     #conteBton{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 50%;
-       
     }
 }
 
@@ -120,15 +99,13 @@
     100%{background-position: right;}
 }
 
-
-
 .puntosNegros{
     background-image: radial-gradient(var(--negrofondo) 35%, transparent 35%);
     background-size: 8px 8px;
     border-radius: 16px;
     animation: prueba 50s infinite alternate;
-   
 }
+
 @keyframes prueba {
     0%{background-position: bottom;} /*por defecto*/
     100%{background-position: top;}
@@ -160,9 +137,7 @@
             }
         }
         .text{
-            
             #dentroText{
-                
                 padding:0;
                 h2{
                     font-size: 2rem;
@@ -182,7 +157,6 @@
     .partIzq{
         .text{
             #dentroText{
-               
                 h2{
                     font-size: 1.2rem;
                     letter-spacing: 1px;
@@ -195,13 +169,8 @@
     }
 
     .btonclass{
-        
         font-size: 1rem;
-
-        
-        
         width: 50%;
-        
     }
 }
 
