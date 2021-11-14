@@ -1,0 +1,103 @@
+#art3{
+    .contenedor{
+       width: 80%; 
+    }
+    .contArticulos{
+        height: 70%;
+    }
+}
+
+.muestraProyectos{
+    width: 100%;
+    max-height: 100%;
+    min-height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorScroll{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    flex-flow: row nowrap;
+    scroll-snap-type: x mandatory;
+    flex: none;
+}
+
+.contenedorScroll::-webkit-scrollbar {
+    width: 8px;     // Tamaño del scroll en vertical 
+    height: 8px;    // Tamaño del scroll en horizontal
+    //display: none;  Ocultar scroll
+}
+.contenedorScroll::-webkit-scrollbar-thumb {
+    background: var(--verde);
+    border-radius: 4px;
+}
+.contenedorScroll::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Estilos track de scroll */
+.contenedorScroll::-webkit-scrollbar-track {
+    background: var(--negrofondo);
+    border-radius: 4px;
+}
+ 
+.contProyecto{
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    text-align: center;
+    flex: none;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.imgProyecto{
+    width: 100%;
+    height:100%;
+    position: relative;
+    overflow-y: hidden;
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.barraProyecto{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    color: #fff;
+}
+
+.descripcion,.tecnologia,.enlaces{
+    width: 100%;
+}
+
+@media screen and (max-width:900px){
+    .muestraProyectos{
+        height: max-content;
+    }
+    #art3{
+        .contenedor{
+           width: 90%; 
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .barraProyecto{
+        position: relative;
+        height: 60px;
+    }
+    .imgProyecto{
+        overflow-y: visible;
+    }
+}

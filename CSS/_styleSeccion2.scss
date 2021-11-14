@@ -1,0 +1,119 @@
+#art2{
+    .contenedor{
+        width: 100%;
+    }
+}
+.contSobreMi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.divPartes{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textSobreMi{
+    width: 60%;
+    p{
+        line-height: 24px;
+        color:rgb(235, 235, 235);
+        text-align: justify;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+}
+
+.grillaHab{
+    width: 80%;
+    margin-top: 5px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px;
+}
+
+.fondoBack{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(24, 24, 27,0.7);
+    padding-bottom: 20px;
+    backdrop-filter: blur(12px);
+}
+
+.deco{
+    background-image:
+        repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 30px,
+        var(--verde) 30px,
+        var(--verde) 60px
+    );
+}
+
+
+.habilidades{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--negrofondo);
+    span{
+        color:#fff;
+        font-size: 36px;
+        padding: 8px;
+    }
+    p{
+        width: 100%;
+        color: #fff;
+        border-left: 1px solid var(--verde);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .grillaHab{
+        width: 90%;
+    }
+    .textSobreMi{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contSobreMi{
+        flex-direction: column;
+    }
+    .divPartes{
+        height: 50%;
+        width: 100%;
+    }
+    .textSobreMi{
+        width: 90%;
+        p{
+            line-height: 14px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .grillaHab{
+        margin-top: 0;
+        gap: 5px;
+    }
+
+    .habilidades{
+        span{
+            font-size: 24px;
+        }
+    }
+}

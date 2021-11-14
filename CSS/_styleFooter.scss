@@ -1,0 +1,27 @@
+
+footer{
+    
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--negrofondo);
+  
+    
+    .contenedor{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        h3{
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            font-style: italic;
+            //text-transform: uppercase;
+        }
+        
+    }
+}

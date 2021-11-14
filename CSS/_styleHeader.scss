@@ -1,0 +1,161 @@
+header{
+    
+    //margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--negrofondo);
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:10px 0;
+    }
+    
+}
+
+
+
+.titulo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    
+    .tituloP{
+       
+        width: 100%;
+        text-align: center;
+        h1{
+            color:#fff;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+    }
+    
+
+    .btonMenu{
+        display: none;
+        width: max-content;
+        
+        span{
+            padding: 8px;
+            font-size: 2rem;
+            color:#fff;
+           
+        }
+    }
+}
+
+
+
+.menu{
+    width: 50%;
+}
+
+
+
+.tabs{
+    float: right;
+    width: 100%;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    padding:10px 0;
+    
+    li{
+        width: 100%;
+             
+        border-right: 1px solid var(--verde);
+        a.active{
+            color: var(--verde);
+        }
+        a{
+            text-align: center;
+            //padding:20px 0 15px 0;
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            &:hover{
+                color: var(--verde);
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 760px){
+    header{
+        width: 100%;
+        
+        .contenedor{
+          
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+    .titulo,.menu{
+        width: 100%;
+    }
+
+    .titulo{
+        .btonMenu{
+            display: block;
+        }
+      
+    }
+
+
+    .menu{
+          
+        height: 100%;
+    }
+
+    
+
+    .tabs{
+        right: -100%;
+        background-color: var(--negrofondo);
+        position: absolute;
+        float: none;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+        transition: 1s;
+        
+        
+        li{
+             
+            border-right:none;
+            padding: 20px 0;
+            
+            a{
+               
+                font-size: 1.5rem;
+                
+            }
+        }
+        
+        
+    }
+    
+   
+   
+}
+
+
+.menuMostrar{
+    right: 0;
+}
