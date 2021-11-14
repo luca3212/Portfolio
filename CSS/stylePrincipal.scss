@@ -128,3 +128,11 @@ section{
     }
 }
 
+
+@media screen and (max-width:400px){
+    .tituloArticulos{
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+}
