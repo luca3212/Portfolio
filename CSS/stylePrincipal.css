@@ -1106,4 +1106,10 @@ section {
     right: 20px;
   }
 }
+
+@media screen and (max-height: 500px) {
+  #art4 .contenedor {
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=stylePrincipal.css.map */
