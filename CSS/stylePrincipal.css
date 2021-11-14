@@ -923,6 +923,9 @@ footer .contenedor h3 {
   .textoContacto .dataContacto .infoContacto {
     margin-bottom: 8px;
   }
+  .textoContacto .dataContacto .infoContacto h5 {
+    font-size: 1rem;
+  }
   .textoContacto .dataContacto .deco1 {
     left: -3%;
     bottom: -3%;
