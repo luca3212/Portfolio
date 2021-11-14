@@ -101,3 +101,11 @@
         overflow-y: visible;
     }
 }
+
+@media screen and(max-height: 600px) {
+    .muestraProyectos{
+        
+        max-height: none;
+        
+    }
+}

@@ -741,6 +741,12 @@ footer .contenedor h3 {
   }
 }
 
+@media screen and (max-height: 600px) {
+  .muestraProyectos {
+    max-height: none;
+  }
+}
+
 .textoContacto {
   width: 100%;
   display: -webkit-box;
@@ -1111,8 +1117,9 @@ section {
 }
 
 @media screen and (max-height: 600px) {
-  #art4 .contenedor {
+  #art1 .contenedor, #art2 .contenedor, #art3 .contenedor, #art4 .contenedor {
     height: 100%;
+    min-height: 550px;
   }
 }
 /*# sourceMappingURL=stylePrincipal.css.map */

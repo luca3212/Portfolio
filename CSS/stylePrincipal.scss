@@ -120,9 +120,10 @@ section{
 }
 
 @media screen and (max-height:600px){
-    #art4{
+    #art1,#art2,#art3,#art4{
         .contenedor{
             height: 100%;
+            min-height: 550px;
         }
     }
 }
