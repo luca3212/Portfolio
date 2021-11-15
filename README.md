@@ -4,6 +4,6 @@ Portfolio Agüero Luca.
 Estudiante Ingeniería en Sistemas de Información.
 
 Tecnologias aplicadas:
-  - HTML, 
+  - HTML 
   - CSS, SCSS
   - JavaScript
