@@ -614,6 +614,12 @@ footer .contenedor h3 {
   }
 }
 
+@media screen and (max-height: 600px) {
+  .divPartes {
+    height: 50%;
+  }
+}
+
 #art3 .contenedor {
   width: 80%;
 }
