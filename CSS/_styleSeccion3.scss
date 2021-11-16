@@ -73,7 +73,7 @@
     background: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-flow: row;
-    align-items: center;
+    align-items: flex-start;
     color: #fff;
 }
 
@@ -147,9 +147,6 @@
         position: relative;
         min-height: max-content;
         flex-flow: column;
-
-    
-        
     }
     .imgProyecto{
         overflow-y: visible;

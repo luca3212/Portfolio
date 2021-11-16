@@ -710,9 +710,9 @@ footer .contenedor h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #fff;
 }
 
