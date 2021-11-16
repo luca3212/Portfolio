@@ -22,9 +22,9 @@
 }
 
 .textSobreMi{
-    width: 60%;
+    width: 70%;
     p{
-        line-height: 24px;
+        line-height: 20px;
         color:rgb(235, 235, 235);
         text-align: justify;
         font-style: italic;
@@ -81,12 +81,16 @@
     }
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 800px){
     .grillaHab{
         width: 90%;
     }
     .textSobreMi{
-        width: 80%;
+        width: 90%;
+        p{
+            letter-spacing: 0;
+        }
+        
     }
 }
 
@@ -97,6 +101,9 @@
     .divPartes{
         height: 50%;
         width: 100%;
+    }
+    .deco{
+        height: 45%;
     }
     .textSobreMi{
         width: 90%;

@@ -503,11 +503,11 @@ footer .contenedor h3 {
 }
 
 .textSobreMi {
-  width: 60%;
+  width: 70%;
 }
 
 .textSobreMi p {
-  line-height: 24px;
+  line-height: 20px;
   color: #ebebeb;
   text-align: justify;
   font-style: italic;
@@ -572,12 +572,15 @@ footer .contenedor h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
   .grillaHab {
     width: 90%;
   }
   .textSobreMi {
-    width: 80%;
+    width: 90%;
+  }
+  .textSobreMi p {
+    letter-spacing: 0;
   }
 }
 
@@ -591,6 +594,9 @@ footer .contenedor h3 {
   .divPartes {
     height: 50%;
     width: 100%;
+  }
+  .deco {
+    height: 45%;
   }
   .textSobreMi {
     width: 90%;
