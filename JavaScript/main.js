@@ -51,19 +51,24 @@ const formContact = document.querySelector('#formId');
 formContact.addEventListener('submit', (e)=>{
   e.preventDefault();
   if(validarForm()){
-
-    fetch("https://formsubmit.co/ajax/b6f562d933e25db921a7a355af553e3f ", {
+    datosJSON={
+      "Nombre": nombreContacto.value,
+      "Email": emailContacto.value,
+      "Mensaje": mensajeContacto.value
+    };
+    
+    fetch("https://api-conect.herokuapp.com/api/email/contacto", {
       method: "POST",
-      body: new FormData(e.target),
+      //body: new FormData(e.target),
+      body:  JSON.stringify(datosJSON),
+      headers: {'Content-Type': 'application/json'}
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then(json => {
-          console.log(json);
-          alert("El mensaje fue enviado con éxito!");
+        alert("El mensaje fue enviado con éxito!");
       })
       .catch(err => {
-          console.log(err);
-          alert("Hubo un error al intentar enviar el mensaje, intente nuevamente..");
+        alert("Hubo un error al intentar enviar el mensaje, intente nuevamente..");
       })
       .finally(() => {
         formContact.reset();
