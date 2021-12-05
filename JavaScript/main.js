@@ -48,9 +48,18 @@ const emailContacto   = document.getElementById("mail");
 const mensajeContacto = document.getElementById("mensaje");
 const formContact = document.querySelector('#formId');
 
+const modal = document.getElementById('modal');
+const spinner = document.getElementById('spinnerCarga');
+const alerta = document.getElementById('alertEstado');
+const textAlerta = document.getElementById('alertMensaje');
+
 formContact.addEventListener('submit', (e)=>{
+  
   e.preventDefault();
   if(validarForm()){
+    modal.style.display = 'block';
+    spinner.style.display = 'block';
+
     datosJSON={
       "Nombre": nombreContacto.value,
       "Email": emailContacto.value,
@@ -65,10 +74,27 @@ formContact.addEventListener('submit', (e)=>{
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then(json => {
-        alert("El mensaje fue enviado con éxito!");
+        spinner.style.display = 'none';
+
+        alerta.style.display = 'block';
+        textAlerta.innerText = 'El Mensaje fue enviado con éxito!';
+
+        setTimeout(() => {
+          alerta.style.display = 'none';
+          modal.style.display = 'none';
+        }, 2500);
+       
       })
       .catch(err => {
-        alert("Hubo un error al intentar enviar el mensaje, intente nuevamente..");
+        spinner.style.display = 'none';
+
+        alerta.style.display = 'block';
+        textAlerta.innerText = 'Hubo un error, intente nuevamente..';
+
+        setTimeout(() => {
+          alerta.style.display = 'none';
+          modal.style.display = 'none';
+        }, 3000);
       })
       .finally(() => {
         formContact.reset();

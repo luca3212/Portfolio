@@ -1217,6 +1217,77 @@ section {
   opacity: 1;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  background-color: rgba(20, 20, 20, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.spinner {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: solid 6px var(--verde);
+  border-radius: 50%;
+  border-top-color: transparent;
+  -webkit-animation: spin 1s infinite;
+          animation: spin 1s infinite;
+}
+
+.alertEstado {
+  display: none;
+  font-size: 2rem;
+  color: #dedede;
+  text-align: center;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 760px) {
   html, body {
     width: 100%;
@@ -1240,6 +1311,10 @@ section {
     padding: 10px 0;
   }
   .tituloArticulos h2 {
+    font-size: 1.5rem;
+  }
+  .alertEstado {
+    width: 90%;
     font-size: 1.5rem;
   }
 }
