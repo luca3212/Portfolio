@@ -247,9 +247,9 @@ header .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -262,7 +262,7 @@ header .contenedor {
   font-weight: 500;
   font-size: 1.2rem;
   height: auto;
-  margin: 20px 15px;
+  margin: 20px 5px;
   width: 140px;
   padding: 8px 0;
   color: white;
@@ -378,6 +378,13 @@ header .contenedor {
   .partDer {
     width: 100%;
   }
+  .partDer #conteBton {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -390,7 +397,7 @@ header .contenedor {
   }
   .btonclass {
     font-size: 1rem;
-    width: 50%;
+    width: 40%;
   }
 }
 

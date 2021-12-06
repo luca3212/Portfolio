@@ -127,6 +127,3 @@ function validarForm(){
     }
   }
 }
-
-
-

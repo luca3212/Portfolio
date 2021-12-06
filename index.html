@@ -12,6 +12,9 @@
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css" />
 
+    <!-- Efects -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     
@@ -55,8 +58,9 @@
 
                     <div class="partDer">
                         <div id="conteBton">
-                            <a href="CV/CV-AgueroLuca.pdf" download="CV-AgueroLuca" class="btonclass" style="background-color: var(--verde);">Descargar CV</a>
                             <a href="https://github.com/luca3212" Target="_blank" class="btonclass">GitHub</a>
+                            <a href="CV/CV-AgueroLuca.pdf" download="CV-AgueroLuca" class="btonclass" style="background-color: var(--verde);">Descargar CV</a>
+                            <a href="https://www.linkedin.com/in/luca-ag%C3%BCero/" Target="_blank" class="btonclass">LinkedIn</a>
                         </div>
                     </div>
                                
@@ -68,7 +72,7 @@
             <div class="contenedor">
                 <article>
                     <div class="contSobreMi">
-                        <div class="divPartes">
+                        <div class="divPartes" data-aos="fade-up">
                             <div class="tituloArticulos">
                                 <h2 class="tituloSobreMi">SOBRE MI</h2>
                             </div>
@@ -88,12 +92,12 @@
                             </div>
                         </div>
 
-                        <div class="divPartes deco">
-                            <div class="fondoBack">
+                        <div class="divPartes deco" >
+                            <div class="fondoBack" data-aos="fade-down">
                                 <div class="tituloArticulos">
                                     <h2 class="tituloSobreMi" style="color:#fff;">HABILIDADES</h2>
                                 </div>
-                                <div class="grillaHab">
+                                <div class="grillaHab" >
                                     <div class="habilidades">
                                         <span class="mdi  mdi-language-java"></span>
                                         <p>Java</p>
@@ -137,13 +141,13 @@
         <section id="art3">
             <div class="contenedor">
                 <article>
-                    <div class="contArticulos">
+                    <div class="contArticulos" data-aos="fade-up">
                         <div class="tituloArticulos">
                             <h2 class="tituloProyecto">PROYECTOS</h2>
                         </div>
     
                         <div class="muestraProyectos">
-                            <div class="contenedorScroll">
+                            <div class="contenedorScroll" >
                                 <div class="contProyecto">
                                     <div class="imgProyecto" >
                                         <img src="img/webs/luma.jpg" alt="">
@@ -280,7 +284,7 @@
         <section id="art4">
             <div class="contenedor">
                 <article>
-                    <div class="contArticulos">
+                    <div class="contArticulos" data-aos="fade-down">
                         <div class="tituloArticulos">
                             <h2 class="titulocontacto">CONTACTO</h2>
                         </div>
@@ -337,6 +341,13 @@
 
         <script type="text/javascript" src="JavaScript/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="JavaScript/main.js"></script>
-        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init({
+                duration: 2000,
+                once: false
+            });
+        </script>
 </body>
 </html>
