@@ -128,13 +128,34 @@ function validarForm() {
 formContact.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validarForm()) {
+    modal.style.display = "block";
+    spinner.style.display = "block";
     let formData = new FormData(formContact);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+      .then(() => {
+        console.log("Form successfully submitted");
+        spinner.style.display = "none";
+
+        alerta.style.display = "block";
+        textAlerta.innerText = "El Mensaje fue enviado con éxito!";
+      })
+      .catch((error) => {
+        console.log(error);
+        spinner.style.display = "none";
+
+        alerta.style.display = "block";
+        textAlerta.innerText = "Hubo un error, intente nuevamente..";
+      })
+      .finally(() => {
+        setTimeout(() => {
+          alerta.style.display = "none";
+          modal.style.display = "none";
+        }, 1500);
+        formContact.reset();
+      });
   }
 });
