@@ -52,53 +52,6 @@ const spinner = document.getElementById("spinnerCarga");
 const alerta = document.getElementById("alertEstado");
 const textAlerta = document.getElementById("alertMensaje");
 
-// formContact.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   if (validarForm()) {
-//     modal.style.display = "block";
-//     spinner.style.display = "block";
-
-//     datosJSON = {
-//       Nombre: nombreContacto.value,
-//       Email: emailContacto.value,
-//       Mensaje: mensajeContacto.value,
-//     };
-
-//     fetch("https://api-conect.herokuapp.com/api/email/contacto", {
-//       method: "POST",
-//       //body: new FormData(e.target),
-//       body: JSON.stringify(datosJSON),
-//       headers: { "Content-Type": "application/json" },
-//     })
-//       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
-//       .then((json) => {
-//         spinner.style.display = "none";
-
-//         alerta.style.display = "block";
-//         textAlerta.innerText = "El Mensaje fue enviado con éxito!";
-
-//         setTimeout(() => {
-//           alerta.style.display = "none";
-//           modal.style.display = "none";
-//         }, 2500);
-//       })
-//       .catch((err) => {
-//         spinner.style.display = "none";
-
-//         alerta.style.display = "block";
-//         textAlerta.innerText = "Hubo un error, intente nuevamente..";
-
-//         setTimeout(() => {
-//           alerta.style.display = "none";
-//           modal.style.display = "none";
-//         }, 3000);
-//       })
-//       .finally(() => {
-//         formContact.reset();
-//       });
-//   }
-// });
-
 function validarForm() {
   const validador =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
